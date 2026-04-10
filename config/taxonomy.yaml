@@ -1,0 +1,20 @@
+taxonomy:
+  Multiscale Mechanics:
+    keywords:
+      - homogenization
+      - RVE
+      - multiscale
+      - representative volume element
+
+  Machine Learning in Mechanics:
+    keywords:
+      - PINN
+      - neural network
+      - surrogate model
+      - deep learning
+
+  Composite Structures:
+    keywords:
+      - composite
+      - laminate
+      - delamination

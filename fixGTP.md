@@ -1,0 +1,1 @@
+conda run -n ALM python main.py --open-chatgpt-profile

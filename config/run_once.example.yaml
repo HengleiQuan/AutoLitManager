@@ -1,0 +1,114 @@
+defaults:
+  issue_index: 0
+  min_issue_size: 5
+  max_items: 80
+  rows: 300
+
+output:
+  runs_dir: data/runs
+  db_file: data/db/papers.jsonl
+  latest_report: reports/latest_report.md
+  report_history_dir: reports/history
+  report_history_index: reports/history/index.md
+
+analysis:
+  skip_seen_papers: true
+  focus_keywords:
+    - PINN
+    - constitutive model
+    - multiscale
+    - damage mechanics
+    - surrogate model
+
+elsevier_api:
+  enabled: true
+  # Prefer setting ELSEVIER_API_KEY in your shell.
+  api_key: ""
+  insttoken: ""
+  max_images_per_paper: 3
+
+article_media:
+  enabled: false
+  max_papers: 16
+  max_images_per_paper: 3
+  min_width: 260
+  min_height: 180
+  page_timeout_sec: 45
+  manual_challenge_wait_sec: 600
+  user_data_dir: D:\Chrome_Automation_Profile\User Data
+  profile_directory: Default
+  auto_close_existing_profile: true
+  headless: false
+  channel: chrome
+  executable_path: C:\Program Files\Google\Chrome\Application\chrome.exe
+
+chatgpt_web:
+  enabled: true
+  chat_url: https://chatgpt.com/
+  history_mode: temporary
+  model_preference: gpt-5.4
+  model_fallback_preference: gpt-5.3
+  use_images: false
+  one_paper_per_batch: true
+  batch_size: 1
+  batch_size_with_images: 1
+  max_images_per_batch: 1
+  retry_per_batch: 0
+  retry_backoff_sec: 20
+  start_new_chat_on_run_start: true
+  start_new_chat_each_batch: false
+  user_data_dir: D:\Chrome_Automation_Profile\User Data
+  profile_directory: Default
+  auto_close_existing_profile: true
+  channel: chrome
+  executable_path: C:\Program Files\Google\Chrome\Application\chrome.exe
+  headless: false
+  input_wait_timeout_sec: 45
+  manual_login_wait_sec: 240
+  upload_wait_sec: 3
+  upload_ready_timeout_sec: 45
+  upload_settle_sec: 2.5
+  send_dispatch_timeout_sec: 20
+  send_dispatch_attempts: 3
+  response_timeout_sec: 600
+  response_min_wait_sec: 90
+  response_settle_sec: 35
+  between_batches_sec: 12
+  keep_browser_open: false
+  second_pass:
+    enabled: false
+    max_papers: 10
+    prompt_style: minimal
+    max_abstract_chars: 1800
+    use_images: false
+    retry_per_batch: 0
+    retry_backoff_sec: 15
+    response_min_wait_sec: 30
+    response_settle_sec: 15
+    between_batches_sec: 1
+
+journals:
+  - url: https://www.sciencedirect.com/journal/computer-methods-in-applied-mechanics-and-engineering
+    alias: cmame
+    name: Computer Methods in Applied Mechanics and Engineering
+    enabled: true
+    issue_index: 0
+    max_items: 120
+  - url: https://www.sciencedirect.com/journal/international-journal-of-plasticity
+    alias: ijp
+    name: International Journal of Plasticity
+    enabled: true
+    issue_index: 0
+    max_items: 120
+  - url: https://www.sciencedirect.com/journal/journal-of-the-mechanics-and-physics-of-solids
+    alias: jmps
+    name: Journal of the Mechanics and Physics of Solids
+    enabled: true
+    issue_index: 0
+    max_items: 120
+  - url: https://www.sciencedirect.com/journal/international-journal-of-solids-and-structures
+    alias: ijss
+    name: International Journal of Solids and Structures
+    enabled: true
+    issue_index: 0
+    max_items: 120
