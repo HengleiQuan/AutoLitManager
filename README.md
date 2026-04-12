@@ -11,7 +11,7 @@
 - `config/run_once.yaml`
 - `config/run_once.example.yaml`
 
-GitHub 分享时建议保留 `config/run_once.example.yaml`，本地实际使用自己的 `config/run_once.yaml`。
+GitHub 分享仅 `config/run_once.example.yaml`，本地实际使用自己的 `config/run_once.yaml`。
 
 ## 配置
 
